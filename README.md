@@ -1,2 +1,0 @@
-# LeetCodeRepo
-leet code repository
