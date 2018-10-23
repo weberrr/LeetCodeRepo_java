@@ -1,7 +1,8 @@
-import java.sql.Struct;
 import java.util.*;
 
 /**
+ * Smallest Range II
+ *
  * @author wangz
  * @date 2018/10/22
  */
