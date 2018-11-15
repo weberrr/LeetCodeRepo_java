@@ -2,13 +2,14 @@ import java.util.HashMap;
 
 /**
  * 实现 Trie (前缀树)
+ * <p>
+ * 实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作
  *
- * @author wangz
  * @date 2018/10/23
  */
 public class _208 {
 
-
+    //定义节点，节点包含value，leaf，子节点children
     static class Tire {
         class Node {
             char value;
