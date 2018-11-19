@@ -41,8 +41,8 @@ public class _10 {
     }
 
     public static void main(String[] args) {
-        String s = "aab";
-        String p = "c*a*b";
+        String s = "a";
+        String p = "aaa";
         _10 test = new _10();
         System.out.println(test.isMatch(s, p));
     }
