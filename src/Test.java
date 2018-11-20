@@ -6,9 +6,7 @@ import java.util.HashMap;
  */
 public class Test{
     public static void main(String[] args){
-        HashMap<String,String> t = new HashMap<>();
-        t.put("1","11");
-        t.put("1","22");
-        System.out.println(t.get("1"));
+       String t="s";
+        System.out.println(t.substring(1));
     }
 }
