@@ -7,26 +7,9 @@
  * @date 2018/10/31
  */
 public class _338 {
+
+    //o(n)的方法  观察规律
     public int[] countBits(int num) {
-        int[] res = new int[num + 1];
-        for (int i = 0; i < num + 1; i++) {
-            res[i] = countOne(i);
-        }
-        return res;
-    }
-
-    public int countOne(int num) {
-        int ans = 0;
-        while (num > 1) {
-            ans += num % 2;
-            num = num / 2;
-        }
-        ans += num;
-        return ans;
-    }
-
-    //o(n)的方法
-    public int[] countBits2(int num) {
         int[] res = new int[num + 1];
         for (int i = 0; i < num + 1; i++) {
             if (i == 0) {
@@ -48,7 +31,7 @@ public class _338 {
 
     public static void main(String[] args) {
         _338 t = new _338();
-        int[] res = t.countBits2(10);
+        int[] res = t.countBits(10);
         for (int i = 0; i < 10; i++) {
             System.out.println(res[i]);
         }
