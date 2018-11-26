@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -6,7 +7,8 @@ import java.util.HashMap;
  */
 public class Test{
     public static void main(String[] args){
-       String t="s";
-        System.out.println(t.substring(1));
+       int[] a = new int[]{1,2};
+       int[] b = new int[]{2,1};
+        System.out.println(Arrays.equals(a,b));
     }
 }
