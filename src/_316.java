@@ -19,7 +19,30 @@ public class _316 {
         return s.length() == 0 ? "" : s.charAt(pos) + removeDuplicateLetters(s.substring(pos + 1).replaceAll("" + s.charAt(pos), ""));
     }
 
+    //栈的做法
+    public String removeDuplicateLetters2(String s) {
+        int[] charNum = new int[26];
+        for (int i = 0; i < s.length(); i++) charNum[s.charAt(i) - 'a']++;
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            charNum[s.charAt(i) - 'a']--;
+            if (stack.contains(s.charAt(i))) {
+                continue;
+            }
+            while (!stack.isEmpty() && stack.peek() > s.charAt(i) && charNum[stack.peek() - 'a'] > 0) {
+                stack.pop();
+            }
+            stack.push(s.charAt(i));
+        }
+        StringBuilder res = new StringBuilder();
+        while (!stack.isEmpty()){
+            res.insert(0, stack.pop());
+        }
+        return String.valueOf(res);
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(new _316().removeDuplicateLetters("cbcdecbc"));
+        System.out.println(new _316().removeDuplicateLetters2("bcabc"));
     }
 }
