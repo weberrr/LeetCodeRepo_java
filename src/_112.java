@@ -19,29 +19,11 @@ public class _112 {
 
     //深度优先搜索
     public boolean hasPathSum(TreeNode root, int sum) {
-        Set<Integer> set = new HashSet<>();
-        dfs(set, root, 0);
-        return set.contains(sum);
+        return root != null && (root.left == null && root.right == null && root.val == sum || hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val));
     }
 
-    private void dfs(Set<Integer> set, TreeNode node, int sub) {
-        if(node==null){
-            return;
-        }
-        sub += node.val;
-        if (node.left == null && node.right == null) {
-            set.add(sub);
-        } else {
-            if (node.left != null) {
-                dfs(set, node.left, sub);
-            }
-            if (node.right != null) {
-                dfs(set, node.right, sub);
-            }
-        }
-    }
 
     public static void main(String[] args) {
-        System.out.println(new _112().hasPathSum(null,1));
+        System.out.println(new _112().hasPathSum(null, 1));
     }
 }
