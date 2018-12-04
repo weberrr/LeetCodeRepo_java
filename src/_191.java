@@ -15,7 +15,17 @@ public class _191 {
         return sum;
     }
 
+    //位运算的另一种方式，可以减少循环次数
     public int hammingWeight2(int n) {
+        int sum = 0;
+        while (n != 0) {
+            sum++;
+            n = n & (n - 1);
+        }
+        return sum;
+    }
+
+    public int hammingWeight3(int n) {
         int sum = 0;
         String str = Integer.toBinaryString(n);
         for (int i = 0; i < str.length(); i++) {
