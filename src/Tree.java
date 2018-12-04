@@ -6,7 +6,7 @@ import java.util.*;
  * @date 2018/11/20
  */
 public class Tree {
-    public class TreeNode {
+    public static class TreeNode {
         Integer val;
         TreeNode left;
         TreeNode right;
@@ -71,12 +71,20 @@ public class Tree {
     }
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(5, 3, 6, 2, 4, null, 7);
+        List<Integer> list = Arrays.asList(1, null, 2, null, null, 3);
         Tree tree = new Tree();
         TreeNode root = tree.buildTree(list);
-        tree.printPreTree(root);
-        System.out.println("");
-        tree.printTree(root);
+
+        TreeNode node1 = new TreeNode(1);
+        TreeNode node2 = new TreeNode(2);
+        TreeNode node3 = new TreeNode(3);
+        node1.right = node2;
+        node2.left = node3;
+//        tree.printPreTree(node1);
+//        System.out.println("");
+//        tree.printTree(node1);
+//        System.out.println("");
+        tree.printTree(node1);
     }
 
 
