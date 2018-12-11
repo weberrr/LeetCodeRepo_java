@@ -1,3 +1,5 @@
+package Utils;
+
 import java.util.*;
 
 /**
@@ -7,9 +9,9 @@ import java.util.*;
  */
 public class Tree {
     public static class TreeNode {
-        Integer val;
-        TreeNode left;
-        TreeNode right;
+        public Integer val;
+        public TreeNode left;
+        public TreeNode right;
 
         TreeNode(Integer x) {
             val = x;
