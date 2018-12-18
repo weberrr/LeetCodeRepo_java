@@ -12,7 +12,7 @@ public class _222 {
         int height = getHeight(root);
         return height < 0 ? 0 : getHeight(root.right) == height - 1 ?
                 (1 << height) + countNodes(root.right)
-                :(1<<height-1)+countNodes(root.left);
+                : (1 << height - 1) + countNodes(root.left);
     }
 
     int getHeight(TreeNode root) {
