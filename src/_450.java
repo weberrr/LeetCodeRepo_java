@@ -1,19 +1,14 @@
+import Utils.*;
+
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 删除二叉搜索树中的节点(Delete Node in a BST)
  *
  * @date 2018/11/20
  */
 public class _450 {
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
@@ -50,25 +45,12 @@ public class _450 {
         }
     }
 
-    public void printTree(TreeNode root) {
-        if (root != null) {
-            System.out.print(root.val + " ");
-            if (root.left != null)
-                printTree(root.left);
-            if (root.right != null)
-                printTree(root.right);
-        }
-    }
-
     public static void main(String[] args) {
-        _450 test = new _450();
-        TreeNode treeNode1 = new TreeNode(1);
-        TreeNode treeNode2 = new TreeNode(2);
-        treeNode1.right = treeNode2;
-        test.printTree(treeNode1);
-        System.out.println("");
-        TreeNode res = test.deleteNode(treeNode1, 2);
-        test.printTree(res);
+        Tree tree = new Tree();
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        TreeNode root = tree.buildTree(list);
+        TreeNode res = new _450().deleteNode(root, 3);
+        tree.printTree(res);
     }
 
 

@@ -2,21 +2,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-
+import Utils.*;
 /**
  * @author wangz
  * @date 2018/12/3
  */
 public class _687 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     int max = 0;
 

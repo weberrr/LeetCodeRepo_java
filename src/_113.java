@@ -1,20 +1,11 @@
 import java.util.*;
-
+import Utils.*;
 /**
  * 路径总和 II
  *
  * @date 2018/12/3
  */
 public class _113 {
-    public class TreeNode {
-        Integer val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(Integer x) {
-            val = x;
-        }
-    }
 
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> res = new ArrayList<>();

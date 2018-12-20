@@ -3,16 +3,9 @@
  *
  * @date 2018/12/3
  */
-public class _437 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+import Utils.*;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+public class _437 {
 
     public int num = 0;
 

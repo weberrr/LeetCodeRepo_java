@@ -6,16 +6,8 @@ import java.util.Set;
  *
  * @date 2018/12/3
  */
+import Utils.*;
 public class _112 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     //深度优先搜索
     public boolean hasPathSum(TreeNode root, int sum) {

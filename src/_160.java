@@ -3,17 +3,8 @@
  *
  * @date 2018/11/16
  */
+import Utils.ListNode;
 public class _160 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     // O(n) 时间复杂度，且仅用 O(1) 内存。
     // 思路：较长的链表先走多出的长度的步长，然后同长度链表比较两者的对象是否相同

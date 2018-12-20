@@ -6,8 +6,7 @@ import java.util.List;
  *
  * @date 2018/12/11
  */
-import Utils.Tree.TreeNode;
-import Utils.Tree;
+import Utils.*;
 
 public class _671 {
 
@@ -32,8 +31,10 @@ public class _671 {
 
     public static void main(String[] args) {
         Tree tree = new Tree();
-        List<Integer> list = Arrays.asList(2, 2, 5, null, null, 5, 7);
-        Tree.TreeNode root = tree.buildTree(list);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+        TreeNode root = tree.buildTree(list);
+        tree.printPreTree(root);
+        System.out.println();
         System.out.println(new _671().findSecondMinimumValue(root));
     }
 }

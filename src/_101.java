@@ -1,21 +1,13 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+import Utils.*;
 /**
  * 对称二叉树
  *
  * @date 2018/12/4
  */
 public class _101 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public boolean isSymmetric(TreeNode root) {
         return root == null || checkChild(root.left, root.right);

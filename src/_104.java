@@ -3,9 +3,7 @@
  *
  * @date 2018/12/17
  */
-
-import Utils.Tree;
-import Utils.Tree.*;
+import Utils.*;
 
 import java.util.Arrays;
 

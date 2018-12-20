@@ -4,7 +4,7 @@
  * @date 2018/12/18
  */
 
-import Utils.Tree.*;
+import Utils.*;
 
 public class _222 {
 

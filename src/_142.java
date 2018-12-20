@@ -3,17 +3,8 @@
  *
  * @date 2018/11/26
  */
+import Utils.ListNode;
 public class _142 {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     //快慢双指针，注意快慢指针时间关系等式： (a+b+n*r)/2 = (a+b)/1 其中b+x=r（环长度）
     //可以得到 a = x + (n-1)r

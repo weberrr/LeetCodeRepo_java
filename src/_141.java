@@ -1,17 +1,8 @@
 /**
  * 环形链表(Linked List Cycle)
  */
+import Utils.ListNode;
 public class _141 {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) return false;
