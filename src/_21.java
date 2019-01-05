@@ -22,7 +22,7 @@ public class _21 {
         }
     }
 
-    //法2：归并排序 （空间换时间）
+    //法2：归并排序
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode cur = dummyHead;
