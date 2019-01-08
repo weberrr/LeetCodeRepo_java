@@ -6,26 +6,34 @@ import java.util.Arrays;
  * @date 2019/1/7
  */
 public class _31 {
-    public void nextPermutation(int[] nums) {
-        if (nums.length == 0 || nums.length == 1) return;
-        int L = -1;
-        for (int i = nums.length - 1; i > 0; i--) {
-            if (nums[i] > nums[i - 1]) {
-                L = i - 1;
-                break;
-            }
-        }
-        if (L == -1) {
-            reverse(nums);
-        } else {
-            for (int i = nums.length - 1; i > 0; i--) {
-                if(nums[i]>nums[L]){
 
-                }
-            }
+    public void nextPermutation(int[] nums) {
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i + 1] <= nums[i]) {
+            i--;
         }
+        if (i >= 0) {
+            int j = nums.length - 1;
+            while (j >= 0 && nums[j] <= nums[i]) {
+                j--;
+            }
+            swap(nums, i, j);
+        }
+        reverse(nums, i + 1);
     }
 
-    private void reverse(int[] nums) {
+    private void reverse(int[] nums, int start) {
+        int i = start;
+        int j = nums.length - 1;
+        while (i < j) {
+            swap(nums, i++, j--);
+        }
+
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
