@@ -4,6 +4,15 @@
  * @date 2019/1/2
  */
 public class _14 {
+
+    /**
+     * 关键词：公共前缀
+     * 时间复杂度：o(nk)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：逐个两辆遍历，找公共前缀
+     **/
+
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) return "";
         if (strs.length == 1) return strs[0];

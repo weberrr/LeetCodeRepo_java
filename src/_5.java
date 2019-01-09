@@ -5,7 +5,14 @@
  */
 public class _5 {
 
-    //中心扩展算法  共有2n-1个中心
+    /**
+     * 关键词：回文子串 + 中心扩展算法
+     * 时间复杂度：o((2n-1)*n) = o(n^2)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：一个字符串共有 n+(n-1)=2n-1 个中心，对每个中心，做往左右的对称扩展，如果左右char相等，则回文子串len+=2
+     **/
+
     public String longestPalindrome(String s) {
         if (s == null || s.length() == 0) return "";
         int start = 0, end = 0;
@@ -23,9 +30,11 @@ public class _5 {
 
     private int expandAroundCenter(String s, int left, int right) {
         while (left >= 0 && right <= s.length() - 1 && s.charAt(left) == s.charAt(right)) {
-            left--;right++;
+            left--;
+            right++;
         }
-        left++;right--;
+        left++;
+        right--;
         return right - left + 1;
     }
 

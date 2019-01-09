@@ -5,7 +5,20 @@
  */
 public class _10 {
 
-    //回溯
+    /**
+     * 关键词：回溯 + 正则
+     * 时间复杂度：o(log(s))
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 回溯问题三要素：选择 条件 终止
+     * 选择：.  *  char
+     * 终止：p.len<=1 时，终止
+     * 条件：p.len>=2时 看p的下一个是否为*
+     * 为 * ：如果能和s[0]匹配, s.substr(1) 或 p.substr(2)(也可能不用这个x*符号) 再做递归 ；不匹配则 p.substr(2) 做递归
+     * 不为 * ： 则和s[o] 匹配 如果匹配 s.substr(1)和p.substr(1) 做递归
+     **/
+
     public boolean isMatch(String s, String p) {
         int sLen = s.length();
         int pLen = p.length();

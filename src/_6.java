@@ -8,6 +8,18 @@ import java.util.List;
  */
 public class _6 {
 
+    /**
+     * 关键词：方向指针
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 对新生成的 Z字形 图形 建立一个 list ， list<StringBuilder>中 每个sb 存储每行的字符
+     * 设定一个方向指针，在行指针 index 等于第0行或最后一行时切换方向
+     * 最后合并list即可
+     *
+     **/
+
     public String convert(String s, int numRows) {
         if (numRows == 1) return s;
         List<StringBuilder> rows = new ArrayList<>();

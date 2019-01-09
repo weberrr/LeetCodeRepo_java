@@ -7,6 +7,14 @@ import java.util.HashMap;
  */
 public class _13 {
 
+    /**
+     * 关键词：哈希表
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：从左往右遍历罗马数字即可，如果当前罗马数字比下一个罗马数字小，则结果存储值减去当前罗马数字在哈希表中对应的值
+     **/
+
     public int romanToInt(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('I', 1);

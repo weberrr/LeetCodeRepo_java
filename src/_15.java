@@ -9,8 +9,17 @@ import java.util.List;
  */
 public class _15 {
 
-    //考虑双指针 两数之和 ：将数组排序，左右双指针 求定和
-    //三数之和多一层遍历
+    /**
+     * 关键词：双指针
+     * 时间复杂度：o(n^2)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：排序 + 定和双指针
+     * 先将数组排序，然后依次遍历，每次遍历的值记为a，则a + b + c = 0 的问题可以转换为 b + c = 0 - a（固定）的问题
+     * b和c的求解可以通过双指针，如果 b + c < 0-a 则b下标++; 相反 则c下标--；
+     * tip:注意数组中可能存在重复数字，则遇到相等的值时 需要跳过（如：a[i]==a[i-1]时，a[i]已经计算过）
+     **/
+
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);

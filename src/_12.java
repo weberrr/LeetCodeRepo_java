@@ -5,6 +5,14 @@
  */
 public class _12 {
 
+    /**
+     * 关键词：辅助表
+     * 时间复杂度：o(1)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：将每位数字对应的罗马数字转成现成的表，直接将数字取模，从表中找每位对应的罗马值再拼接
+     **/
+
     public String intToRoman(int num) {
         StringBuilder res = new StringBuilder();
         String[][] help = new String[][]{

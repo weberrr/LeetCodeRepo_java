@@ -3,12 +3,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wangz
+ * 3. 无重复字符的最长子串
+ *
  * @date 2018/12/20
  */
 public class _3 {
 
-    // O(2n)  hashset 双指针
+    /**
+     * 关键词：哈希表+滑动窗口双指针
+     * 时间复杂度：o(2n)
+     * 空间复杂度：o(min(m,n))
+     * <p>
+     * 思路：通过滑动窗口控制不重复子串的长度
+     **/
+
     public int lengthOfLongestSubstring(String s) {
         int res = 0;
         int i = 0, j = 0, n = s.length();
@@ -26,7 +34,13 @@ public class _3 {
         return res;
     }
 
-    //O(n)  hashmap 双指针
+    /**
+     * 改进：使用hashMap代替hashSet。
+     * 如果在 [i,j) 范围内存在与 j' 重复的元素，
+     * 不需要逐渐增加i，可以直接跳过 [i,j'] 内的元素，即 i = j'+ 1
+     *
+     * 时间复杂度：o(n)
+     **/
     public int lengthOfLongestSubstring2(String s) {
         int res = 0;
         HashMap<Character, Integer> map = new HashMap<>();

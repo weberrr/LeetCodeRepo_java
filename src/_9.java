@@ -5,7 +5,14 @@
  */
 public class _9 {
 
-    //数学做法,反转一下试试
+    /**
+     * 关键词：回文数
+     * 时间复杂度：o(log(x)) 即x的数字长度
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：看看翻转以后的数字是否和
+     **/
+
     public boolean isPalindrome(int x) {
         if (x < 0) return false;
         int origin = x;

@@ -5,7 +5,14 @@
  */
 public class _8 {
 
-    //条件恐怖
+    /**
+     * 关键词：情况分析
+     * 时间复杂度：o(len(str))
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：主要就是特殊情况比较多，需要处理好特殊情况
+     **/
+
     public int myAtoi(String str) {
         int INT_MIN = -2147483648;
         String INT_STR = "2147483647";
