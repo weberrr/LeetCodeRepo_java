@@ -7,6 +7,17 @@ import java.util.Stack;
  * @date 2019/1/5
  */
 public class _20 {
+
+    /**
+     * 关键词：哈希表 + 栈
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 将左括号放入栈中，每次遇到和栈顶匹配的右括号时弹栈
+     **/
+
+
     public boolean isValid(String s) {
         HashMap<Character, Character> map = new HashMap<>();
         map.put('{', '}');

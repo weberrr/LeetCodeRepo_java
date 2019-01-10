@@ -9,14 +9,26 @@ import java.util.List;
  */
 public class _22 {
 
-    //回溯问题 ：具有限界条件的DFS算法称为回溯算法
-    //选择（Options） + 限制（Restraints） + 结束条件（Termination）
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(2^n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：选择（Options） + 限制（Restraints） + 结束条件（Termination） ： ORT原则
+     * 选择：( )
+     * 限制：
+     * 用left_num和right_num表示左右括号的可用数量。
+     * 如果left_num < right_num,表明左括号用得多，可以加右括号也可以加左括号
+     * 如果left_num = right_num,表明左右用的一样多，只可以加左括号
+     * 结束：left_num和right_num都为0（用完括号）
+     **/
 
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<>();
         backtrack(list, n, n, "");
         return list;
     }
+
 
     public void backtrack(List<String> list, int leftNum, int rightNum, String subStr) {
         if (leftNum == 0 && rightNum == 0) {

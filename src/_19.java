@@ -8,6 +8,16 @@ import Utils.ListNode;
 
 public class _19 {
 
+    /**
+     * 关键词：哈希表
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 将每个节点的下标i以及节点放入hashMap中
+     * 删除第i个节点即将map中第i-1个节点的next指针指向i节点的next即可
+     **/
+
     public ListNode removeNthFromEnd(ListNode head, int n) {
         HashMap<Integer, ListNode> map = new HashMap<>();
         int index = 0;

@@ -9,7 +9,15 @@ import java.util.Arrays;
  */
 public class _24 {
 
-    //递归 （用循环也可以
+    /**
+     * 关键词：递归
+     * 时间复杂度：o(n/2)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 每次交换两个节点，然后递归两个节点后的next链表
+     **/
+
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode temp = head.next;

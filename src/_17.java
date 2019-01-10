@@ -9,7 +9,18 @@ import java.util.List;
  */
 public class _17 {
 
-    //回溯
+    /**
+     * 关键词：哈希表 + 回溯
+     * 时间复杂度：o(k^n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：哈希表 + 回溯（选择、条件、终止）
+     * 选择：数字2-9
+     * 条件：无
+     * 终止：循环的index达到字符串length，将子串加入list
+     *
+     **/
+
     public List<String> letterCombinations(String digits) {
         HashMap<Integer, String> map = new HashMap<>();
         map.put(2, "abc");

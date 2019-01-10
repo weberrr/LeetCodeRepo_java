@@ -9,6 +9,17 @@ import java.util.List;
  */
 public class _18 {
 
+    /**
+     * 关键词：双指针
+     * 时间复杂度：o(n^3)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：排序 + 最接近定和 双指针
+     * 与15题类似，先将数组排序，然后双层循环遍历a[i],a[j]
+     * 对每个a[j],可以使左指针为a[j+1],右指针为a[n]，然后计算四个值的和，并求得与target是否相等
+     * tip:相同的值要跳过！
+     **/
+
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);

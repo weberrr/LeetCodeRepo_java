@@ -7,7 +7,17 @@ import java.util.Arrays;
  */
 public class _16 {
 
-    //双指针
+    /**
+     * 关键词：双指针
+     * 时间复杂度：o(n^2)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：排序 + 最接近定和 双指针
+     * 与15题类似，先将数组排序，然后依次遍历a[i]
+     * 对每个a[i],可以使左指针为a[i+1],右指针为a[n]，然后计算三个值的和，并求得与target的绝对差值
+     * tip:题目告诉答案唯一，所以不用跳过相同值
+     **/
+
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int minD = Integer.MAX_VALUE;

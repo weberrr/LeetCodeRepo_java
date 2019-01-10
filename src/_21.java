@@ -7,7 +7,15 @@ import Utils.*;
  */
 public class _21 {
 
-    //法1：递归
+    /**
+     * 关键词：递归
+     * 时间复杂度：o(min(m,n))
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 每次比较两个节点的值大小，然后取大的一个节点和小的节点的next继续递归，知道一边节点空掉即合并完毕
+     **/
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) return null;
         else if (l1 == null || l2 == null) return l1 == null ? l2 : l1;
@@ -22,7 +30,16 @@ public class _21 {
         }
     }
 
-    //法2：归并排序
+
+    /**
+     * 关键词：循环/归并排序
+     * 时间复杂度：o(min(m,n))
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 将之前的递归改用循环实现
+     **/
+
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode cur = dummyHead;

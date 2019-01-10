@@ -10,8 +10,17 @@ import java.util.PriorityQueue;
  */
 public class _23 {
 
+    /**
+     * 关键词：堆排序 优先队列
+     * 时间复杂度：o(nklogk) ： 每个值都要取一次，一共取nk次。每次更新优先队列要logk的复杂度
+     * 空间复杂度：o(k) : 优先队列所占的空间
+     * <p>
+     * 思路：
+     * 构建一个让节点从小到大排序的优先队列（即利用堆排序的性质），
+     * 起步输入所有链表的头节点。每次输出一个最小的节点，然后将该节点的next加入队列，使其继续输出
+     * 最终形成一个链表
+     **/
 
-    //时间复杂度 o(nlogk)  空间复杂度 o(k)
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) return null;
         ListNode dummyNode = new ListNode(0);
