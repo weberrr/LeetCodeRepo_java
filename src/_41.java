@@ -15,7 +15,7 @@ public class _41 {
         }
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != i + 1) {
-                return i;
+                return i + 1;
             }
         }
         return nums.length + 1;
