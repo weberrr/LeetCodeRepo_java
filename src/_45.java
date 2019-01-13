@@ -5,6 +5,7 @@
  */
 public class _45 {
 
+    //贪心
     public int jump(int[] nums) {
         if (nums.length == 1) return 0;
         int reach = 0; // 目前已经到达的
