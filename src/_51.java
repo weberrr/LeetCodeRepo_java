@@ -7,6 +7,9 @@ import java.util.List;
  * @date 2018/12/17
  */
 public class _51 {
+
+    // 存储每一行中皇后位置的列坐标
+    // 既保证了每行每列不重复只有一个皇后，又减少了存储量，方便递归
     public List<List<String>> res = new ArrayList<>();
 
     public List<List<String>> solveNQueens(int n) {
