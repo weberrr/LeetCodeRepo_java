@@ -1,24 +1,10 @@
 import java.util.*;
+import Utils.*;
 
 /**
  * 435. 无重叠区间
  */
 public class _435 {
-
-    public static class Interval {
-        int start;
-        int end;
-
-        Interval() {
-            start = 0;
-            end = 0;
-        }
-
-        Interval(int s, int e) {
-            start = s;
-            end = e;
-        }
-    }
 
     //构建优先队列 使用两次循环
     public int eraseOverlapIntervals(Interval[] intervals) {
@@ -66,7 +52,9 @@ public class _435 {
 
 
     public static void main(String[] args) {
-        Interval[] list = new Interval[]{new Interval(1, 2), new Interval(2, 3), new Interval(3, 4), new Interval(-100, -2), new Interval(5, 7)};
+        Interval temp = new Interval();
+        Interval[] list =  temp.createIntervalArray("[[1,2],[2,3],[3,4],[100,-2],[5,7]]");
+        Interval[] list1 = new Interval[]{new Interval(1, 2), new Interval(2, 3), new Interval(3, 4), new Interval(-100, 4), new Interval(5, 7)};
         System.out.println(new _435().eraseOverlapIntervals(list));
     }
 }
