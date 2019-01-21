@@ -10,7 +10,14 @@ import java.util.List;
  */
 public class _46 {
 
-    //回溯
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 每次交换一个值，index+1 进行回溯
+     **/
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         backtrack(list, nums, 0);

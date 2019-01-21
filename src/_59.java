@@ -6,6 +6,16 @@
  * @date 2018/10/24
  */
 public class _59 {
+
+    /**
+     * 关键词：方向指针
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 设置方向指针way = 'R''D''L''U'
+     **/
+
     public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];
         int i = 0;

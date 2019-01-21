@@ -7,6 +7,17 @@ import java.util.Arrays;
  */
 public class _31 {
 
+    /**
+     * 关键词：字母序排列
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 从后往前找到第一个逆序的位置，记为i
+     * 再从后往前，找到第一个比i大的位置，记为j
+     * 交换 i j
+     **/
+
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
         while (i >= 0 && nums[i + 1] <= nums[i]) {

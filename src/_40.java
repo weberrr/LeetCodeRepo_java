@@ -9,7 +9,16 @@ import java.util.List;
  */
 public class _40 {
 
-    //回溯
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 选择：从下标index开始，选择candidates中的不重复值
+     * 条件：遇到重复的值跳过，remain = target - candidates[i]>0
+     * 结束：remain <=0
+     **/
 
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();

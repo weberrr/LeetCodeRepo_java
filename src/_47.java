@@ -7,42 +7,16 @@ import java.util.*;
  */
 public class _47 {
 
-    //回溯
-    //https://blog.csdn.net/happyaaaaaaaaaaa/article/details/51644993
+    /**
+     * 关键词：符号位 + 回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 先给数组排个序，设定一个符号位，记录当前位置的数字是否被使用
+     * 如果和前一个数相等，并且前一个数没使用，则说明重复了
+     **/
     public List<List<Integer>> permuteUnique(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(list, nums, 0);
-        return list;
-    }
-
-    private void backtrack(List<List<Integer>> list, int[] nums, int index) {
-        if (index == nums.length - 1) {
-            List<Integer> perAns = new ArrayList<>();
-            for (int num : nums) {
-                perAns.add(num);
-            }
-            list.add(perAns);
-        } else {
-            Set<Integer> appeared = new HashSet<>();
-            for (int i = index; i < nums.length; i++) {
-                if (appeared.add(nums[i])) {
-                    swap(nums, i, index);
-                    backtrack(list, nums, index + 1);
-                    swap(nums, i, index);
-                }
-            }
-        }
-    }
-
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
-
-    //最快的方法：设定符号位
-    public List<List<Integer>> permuteUnique2(int[] nums) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         if(nums==null || nums.length==0) return res;
         boolean[] used = new boolean[nums.length];

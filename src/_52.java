@@ -7,6 +7,17 @@ import java.util.List;
  * @date 2019/1/15
  */
 public class _52 {
+
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * list存储每行中的列值，从而保证了行列不重合
+     * check的时候只用check对角线
+     **/
+
     private int ans = 0;
 
     public int totalNQueens(int n) {

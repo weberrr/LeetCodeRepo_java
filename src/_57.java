@@ -10,6 +10,17 @@ import java.util.List;
  */
 public class _57 {
 
+    /**
+     * 关键词：有序双值插入
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 记录 start 和 end 的值，并和新插入的比较，共3种情况。
+     * end < new.start : 直接加入
+     * start <= new.end : 记录min start，更新max end
+     * start > new.end : 插入之前的节点，并插入这个节点
+     **/
 
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> res = new ArrayList<>();

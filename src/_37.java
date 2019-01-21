@@ -8,6 +8,15 @@ import java.util.HashSet;
  */
 public class _37 {
 
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(9^n)
+     * 空间复杂度：o(3^n)
+     * <p>
+     * 思路：
+     * 对每个填入的值进行valid检验，然后进行回溯
+     **/
+
     public void solveSudoku(char[][] board) {
         dfs(board, 0);
     }

@@ -9,7 +9,15 @@ import java.util.*;
  */
 public class _56 {
 
-    //优先队列
+    /**
+     * 关键词：优先队列
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 构建优先队列，然后如果遇到 重叠区间，记录 start 和 end 的值。直到遇到start > 记录的end
+     **/
+
     public List<Interval> merge(List<Interval> intervals) {
         List<Interval> res = new ArrayList<>();
         if (intervals == null || intervals.size() == 0) return res;
@@ -37,7 +45,15 @@ public class _56 {
         return res;
     }
 
-    //优化 : 将start和end分两个数组并排序  每次比较start[i+1] > end[i] 如果满足 则加入 start[j],end[i] 并把j = i+1
+    /**
+     * 优化
+     * 关键词：辅助数组
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：分别记录start、end
+     * 然后遇到start[i+1]>end[i] 则存入 interval[start[j],end[i])
+     **/
     public List<Interval> merge2(List<Interval> intervals) {
         List<Interval> res = new ArrayList<>();
         int n = intervals.size();

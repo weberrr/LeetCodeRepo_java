@@ -6,6 +6,17 @@ import java.util.*;
  * @date 2018/11/26
  */
 public class _49 {
+
+    /**
+     * 关键词：哈希表
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 建立哈希表，每次遇到没存储过的有序chars，就添加新map
+     * 遇到存储过的有序chars，就放入对应的list中
+     **/
+
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {

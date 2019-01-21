@@ -5,8 +5,16 @@
  */
 public class _42 {
 
-    //双指针
-    //可以考虑dp？
+    /**
+     * 关键词：双指针
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 记录左右指针 l r，左右最高 ml mr
+     * 从矮的一边进行向中行进，每次行进，如果高度下降了， res += ml - height[l] ，如果高度上升了，接不到雨水，更新 l r ml mr即可
+     **/
+
     public int trap(int[] height) {
         if (height.length < 3) return 0;
         int ml = height[0]; // 左边最高

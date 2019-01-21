@@ -10,6 +10,19 @@ import java.util.List;
  * @date 2018/10/25
  */
 public class _39 {
+
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 选择：candidates中的任何值
+     * 条件：remain = target - candidates[i]>0
+     * 结束：remain <=0
+     **/
+
+
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<List<Integer>>();

@@ -5,6 +5,15 @@
  */
 public class _60 {
 
+    /**
+     * 关键词：计算每位
+     * 时间复杂度：o(n^2)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 记录每一位 k/(n-1)!的值，找到第index个没被使用的
+     **/
+
     public String getPermutation(int n, int k) {
         boolean[] used = new boolean[n];
         int factor = factorial(n - 1);

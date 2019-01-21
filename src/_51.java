@@ -8,8 +8,16 @@ import java.util.List;
  */
 public class _51 {
 
-    // 存储每一行中皇后位置的列坐标
-    // 既保证了每行每列不重复只有一个皇后，又减少了存储量，方便递归
+    /**
+     * 关键词：回溯
+     * 时间复杂度：o(^n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * list存储每行中的列值，从而保证了行列不重合
+     * check的时候只用check对角线
+     **/
+
     public List<List<String>> res = new ArrayList<>();
 
     public List<List<String>> solveNQueens(int n) {

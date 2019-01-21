@@ -6,6 +6,19 @@ import java.util.HashSet;
  * @date 2018/11/28
  */
 public class _36 {
+
+    /**
+     * 关键词：哈希set
+     * 时间复杂度：o(n^2)
+     * 空间复杂度：o(3n)
+     * <p>
+     * 思路：
+     * 对每行每列每方建立set
+     * 每方的遍历法：
+     * rowIndex = 3 * (i / 3) + j / 3
+     * colIndex = 3 * (i % 3) + j % 3
+     **/
+
     public boolean isValidSudoku(char[][] board) {
         for (int i = 0; i < 9; i++) {
             HashSet<Character> rows = new HashSet<>();

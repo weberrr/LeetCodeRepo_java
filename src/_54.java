@@ -7,6 +7,16 @@ import java.util.List;
  * @date 2019/1/15
  */
 public class _54 {
+
+    /**
+     * 关键词：方向指针
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 借助方向指针和辅助标记位
+     **/
+
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> res = new ArrayList<>();
         if (matrix == null || matrix.length == 0) return res;
@@ -49,7 +59,15 @@ public class _54 {
         return res;
     }
 
-    //不借助额外空间和方向指针
+    /**
+     * 优化：[x1][y1] -> [x2][y2]
+     * 关键词：坐标转移方程
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 找到每次循环一圈中，坐标转移方程，动态更新 x1，y1,x2,y2
+     **/
     public List<Integer> spiralOrder2(int[][] matrix) {
         List<Integer> res = new ArrayList<>();
         if (matrix == null || matrix.length == 0) return res;

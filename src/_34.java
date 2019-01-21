@@ -9,7 +9,15 @@ import java.util.List;
  */
 public class _34 {
 
-    //二分查找
+    /**
+     * 关键词：二分查找
+     * 时间复杂度：o(log n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 传统的二分查找后，在找到nums[index]=target时，对其进行左右探索，来找到左右边界
+     **/
+
     public int[] searchRange(int[] nums, int target) {
         int[] res = new int[]{-1, -1};
         int left = 0;

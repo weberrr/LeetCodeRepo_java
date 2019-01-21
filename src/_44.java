@@ -5,7 +5,15 @@
  */
 public class _44 {
 
-    //双指针
+    /**
+     * 关键词：双指针
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 记录下star index 和 i index的 下标，每次没匹配上的时候，p返回star_index +1  i返回 ++i_index
+     **/
+
     public boolean isMatch(String s, String p) {
         int i = 0, j = 0;
         int i_index = 0, star_index = -1; //需记录star的下标和i_index的下标

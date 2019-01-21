@@ -8,6 +8,16 @@ import java.util.ArrayList;
  * @date 2018/11/7
  */
 public class _38 {
+
+    /**
+     * 关键词：循环
+     * 时间复杂度：o(n^2)
+     * 空间复杂度：o(n)
+     * <p>
+     * 思路：
+     * 建立一个list存储所有的中间结果，对每个中间结果，数数并加入str到list
+     **/
+
     public String countAndSay(int n) {
         ArrayList<String> res = new ArrayList<String>();
         res.add("1");

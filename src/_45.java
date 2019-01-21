@@ -5,7 +5,17 @@
  */
 public class _45 {
 
-    //贪心
+    /**
+     * 关键词：贪心算法
+     * 时间复杂度：o(n)
+     * 空间复杂度：o(1)
+     * <p>
+     * 思路：
+     * 每次记录目前已到达的reach 和下一步要到达的nextReach
+     * 下一步未到达终点前，每次更新nextReach
+     * 当i达到当前的reach时，需要增step，并更新reach = nextReach
+     **/
+
     public int jump(int[] nums) {
         if (nums.length == 1) return 0;
         int reach = 0; // 目前已经到达的
