@@ -5,10 +5,16 @@ import java.util.HashMap;
  * @author wangz
  * @date 2018/11/12
  */
-public class Test{
-    public static void main(String[] args){
-       int[] a = new int[]{1,2};
-       int[] b = new int[]{2,1};
-        System.out.println(Arrays.equals(a,b));
+public class Test {
+    public static int T(int i) {
+        if (i == 1) return 1;
+        if (i == 2) return 2;
+        else return T(i - 1) + T(i - 2) + 5;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 1; i < 10; i++) {
+            System.out.println(T(i));
+        }
     }
 }
