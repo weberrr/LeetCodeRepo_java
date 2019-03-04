@@ -1,3 +1,4 @@
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -13,8 +14,10 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        for (int i = 1; i < 10; i++) {
-            System.out.println(T(i));
-        }
+        short s1 = 1;
+        System.out.println(s1);
+        s1 +=1;
+
     }
+
 }
