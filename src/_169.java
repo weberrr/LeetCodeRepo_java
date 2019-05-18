@@ -1,33 +1,25 @@
 /**
- * (Two Sum II - Input array is sorted)两数之和 II - 输入有序数组
+ * 169.求众数
  *
- * @date 2018/11/15
+ * @date 2019/5/18
  */
 public class _169 {
-    public int[] twoSum(int[] numbers, int target) {
-        int[] res = new int[2];
-        int startIndex = 0;
-        int endIndex = numbers.length - 1;
-        while (endIndex > startIndex) {
-            int sum = numbers[startIndex] + numbers[endIndex];
-            if (sum == target) {
-                res[0] = startIndex + 1;
-                res[1] = endIndex + 1;
-                return res;
-            } else if (sum > target) {
-                endIndex -= 1;
-            } else {
-                startIndex += 1;
+    public int majorityElement(int[] nums) {
+        int[] bit = new int[32];
+        for (int n : nums) {
+            for (int i = 0; i < 32; i++) {
+                if ((n >> (31 - i) & 1) == 1) {
+                    bit[i]++;
+                }
             }
         }
-        return res;
-    }
-
-    public static void main(String[] args) {
-        _169 test = new _169();
-        int[] numbers = {2, 7, 11, 15};
-        int target = 9;
-        System.out.println(test.twoSum(numbers, target)[0] + " " + test.twoSum(numbers, target)[1]);
+        int ret = 0;
+        for (int i = 0; i < 32; i++) {
+            if (bit[i] > nums.length / 2) {
+                ret += (1 << (31 - i));
+            }
+        }
+        return ret;
     }
 
 }
