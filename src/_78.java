@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,7 +25,23 @@ public class _78 {
         }
     }
 
+    public List<List<Integer>> subsets2(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        Arrays.sort(nums);
+        int len = 1 << nums.length;
+        for (int i = 0; i < len; i++) {
+            List<Integer> temp = new ArrayList<>();
+            for (int j = 0; j < nums.length; j++) {
+                if ((i & (1 << j)) > 0) {
+                    temp.add(nums[j]);
+                }
+            }
+            res.add(temp);
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new _78().subsets(new int[]{1, 2, 3}));
+        System.out.println(new _78().subsets2(new int[]{1, 2, 3}));
     }
 }
